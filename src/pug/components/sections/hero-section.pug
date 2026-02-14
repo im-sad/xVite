@@ -1,0 +1,18 @@
+mixin hero-section(props = {})
+
+  section.hero-section&attributes(attributes)
+    .width
+      h1 Hello world
+
+      +pic({ name: 'logo', format: 'svg', path: 'content' })
+
+      b(
+        data-tip="This is a tooltip"
+      ) Tooltip
+
+      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima quam, ipsam a itaque excepturi cumque explicabo exercitationem corrupti iure nesciunt sed commodi eum, tempore maiores quibusdam non. Sit, doloribus neque.
+
+      +btn({
+        var: 'primary',
+        size: 'md'
+      })(data-open-modal="#modal-feedback") Open modal

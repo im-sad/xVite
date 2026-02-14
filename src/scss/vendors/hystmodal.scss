@@ -1,0 +1,131 @@
+:root {
+  --hystmodal-speed: 0.2s;
+  --hystmodal-zindex: var(--zindex-modal, 77);
+  --hystmodal-width: #{rem(600)};
+}
+
+.hystmodal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0 min-content 0;
+  justify-content: center;
+  align-content: space-between;
+  visibility: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #000;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &--animated::before {
+    transition: opacity var(--hystmodal-speed) ease;
+  }
+
+  &--active::before {
+    opacity: 0.6;
+  }
+
+  &--moved,
+  &--active {
+    opacity: 1;
+    pointer-events: none;
+    visibility: visible;
+  }
+
+  &--active {
+    pointer-events: auto;
+  }
+
+  &__wrap {
+    display: block;
+    min-width: 0;
+    grid-row: 2 / 3;
+  }
+
+  &__window {
+    min-width: 0;
+    grid-row: 2 / 3;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #fff;
+    width: var(--hystmodal-width, 600px);
+    max-width: 100%;
+    overflow: visible;
+    transform: scale(0.95);
+    opacity: 0;
+    margin: 50px auto;
+  }
+
+  &--animated &__window {
+    transition: transform var(--hystmodal-speed) ease 0s, opacity var(--hystmodal-speed) ease 0s;
+  }
+
+  &--active &__window {
+    transform: none;
+    opacity: 1;
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    right: 15px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%23000' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      opacity: 0.95;
+    }
+  }
+
+  // MEDIA
+  @include media(tablet) {
+    &__close {
+      top: 10px;
+      right: 10px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__window {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

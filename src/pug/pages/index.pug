@@ -1,0 +1,12 @@
+extends ../components/layouts/main-layout
+
+block variables
+  -
+    title = 'Главная'
+
+block main
+  +hero-section()
+
+block modals
+  +modal({ id: 'modal-feedback' })
+    +modal-feedback()

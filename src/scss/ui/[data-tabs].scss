@@ -1,0 +1,13 @@
+[data-tabs-blocks] > * {
+  --tabs-display: block;
+  --trans-tabs-length: 0.3s;
+
+  display: none;
+  opacity: 0;
+
+  &.is-active {
+    opacity: 1;
+    display: var(--tabs-display);
+    animation: display-none var(--trans-tabs-length) ease;
+  }
+}

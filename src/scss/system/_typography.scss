@@ -1,0 +1,23 @@
+@use '@scss/system/functions' as f;
+@use '@scss/system/mix' as m;
+
+// Titles
+@mixin titleH1 {
+  font-size: clamp(f.rem(32), f.size(35), f.rem(40));
+  line-height: f.lh(30px, 34px);
+  font-weight: 700;
+}
+
+// Text
+@mixin textBase {
+  @include m.font-size(14px, 18px);
+}
+
+// UI
+@mixin btn-base {
+  @include m.font-size(16px, 24px);
+}
+
+@mixin field-base {
+  @include m.font-size(16px, 24px);
+}

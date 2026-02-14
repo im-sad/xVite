@@ -1,0 +1,47 @@
+doctype html
+include ../../snippets/vars
+
+block variables
+
+include ../components
+include ../_auto-import
+
+html(lang="ru")
+  head
+    include ../../snippets/meta
+    include ../../snippets/favicon
+    include ../../snippets/open-graph
+
+    //- Preload resources
+    //- link(rel="preload" href="fonts/pt-sans/PT-Sans-Regular.woff2" as="font" crossorigin="anonymous")
+
+    link(rel="stylesheet" href="/src/scss/style.scss")
+
+    script(data-skip-moving="true").
+      var ASSETS_PATH = './assets/'
+
+  body(class=bodyMods)
+    noscript
+      .noscript Для полноценной работы сайта, необходимо включить JavaScript!
+
+    +sprite()
+    //- +preloader()
+
+    .page(class=pageMods && `page--${pageMods}`)
+      .page__core
+        if hasHeader
+          +header({
+            mod: headerMods,
+            currentUrl: currentUrl
+          })
+
+        block main
+
+      if hasFooter
+        +footer({ mod: footerMods })
+
+    block modals
+
+    script(src="/src/js/main.ts" type="module" defer)
+
+    block scripts

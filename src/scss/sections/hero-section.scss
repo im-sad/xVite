@@ -1,0 +1,13 @@
+.hero-section {
+  @include textBase;
+  overflow: hidden;
+  padding-block: rem(32);
+
+  h1 {
+    @include titleH1;
+  }
+
+  img {
+    animation: scale 4s linear infinite;
+  }
+}

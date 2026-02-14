@@ -1,0 +1,17 @@
+mixin feedback-form(props = {})
+
+  .feedback-form&attributes(attributes)
+    form.feedback-form__wrapper(action="#" method="post" data-form="feedback")
+      +field()
+        +input({
+          size: 'md',
+          placeholder: 'имя*',
+          isRequired: true
+        })
+
+      +btn({
+        type: 'submit',
+        size: 'md',
+        mod: 'fluid',
+        hasArrow: true
+      }) Submit

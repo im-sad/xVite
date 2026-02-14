@@ -1,0 +1,117 @@
+extends ../components/layouts/main-layout
+
+block variables
+  -
+    title = 'UI-kit'
+    hasFooter = false
+    hasHeader = false
+
+    const items = [
+      {
+        title: 'Buttons',
+        href: '#buttons'
+      },
+      {
+        title: 'Inputs',
+        href: '#inputs'
+      },
+      {
+        title: 'Textareas',
+        href: '#textareas'
+      },
+      {
+        title: 'Selects',
+        href: '#selects'
+      },
+      {
+        title: 'Checkboxes',
+        href: '#checkboxes'
+      },
+      {
+        title: 'Radios',
+        href: '#radios'
+      },
+      {
+        title: 'Badges',
+        href: '#badges'
+      }
+    ]
+
+    const testSelect = [
+      { title: 'Value 1', value: 'value1'},
+      { title: 'Value 2', value: 'value2' }
+    ]
+
+block main
+  style
+    include ../styles/ui-kit.css
+
+  main.container
+    .wrapper
+      .sidebar
+        ul.links
+          each item in items
+            li
+              a(href=item.href).links__link!=item.title
+
+      .main
+        .section#buttons
+          h2.section__title Buttons
+          .section__row
+            +btn({ var: 'primary' }) Button primary
+            +btn({ var: 'primary', size: 'sm' }) Button SM
+            +btn({ var: 'primary', size: 'md' }) Button MD
+            +btn({ var: 'primary', size: 'lg' }) Button LG
+            +btn({ var: 'primary', size: 'lg', hasLoad: true, isLoad: true }) Button LG
+          .section__row
+            +btn({ var: 'secondary' }) Button secondary
+            +btn({ var: 'secondary', size: 'sm' }) Button SM
+            +btn({ var: 'secondary', size: 'md' }) Button MD
+            +btn({ var: 'secondary', size: 'lg' }) Button LG
+            +btn({ var: 'secondary', size: 'lg', hasLoad: true, isLoad: true }) Button LG
+
+        .section#inputs
+          h2.section__title Inputs
+          .section__row.section__row--max
+            +input({ var: 'primary', placeholder: 'Input' })
+            +input({ var: 'primary', size: 'sm', value: 'Input SM' })
+            +input({ var: 'primary', size: 'md', value: 'Input MD' })
+            +input({ var: 'primary', size: 'lg', value: 'Input LG' })
+
+        .section#textareas
+          h2.section__title Textareas
+          .section__row.section__row--max
+            +textarea({ var: 'primary', placeholder: 'Textarea' })
+            +textarea({ var: 'primary', size: 'sm', value: 'Textarea SM' })
+            +textarea({ var: 'primary', size: 'md', value: 'Textarea MD' })
+            +textarea({ var: 'primary', size: 'lg', value: 'Textarea LG' })
+
+        .section#selects
+          h2.section__title Selects
+          .section__row.section__row--max
+            +select({ var: 'primary', placeholder: 'Select', items: testSelect })
+            +select({ var: 'primary', size: 'sm', placeholder: 'Select SM', items: testSelect })
+            +select({ var: 'primary', size: 'md', placeholder: 'Select MD', items: testSelect })
+            +select({ var: 'primary', size: 'lg', placeholder: 'Select LG', items: testSelect })
+
+        .section#checkboxes
+          h2.section__title Checkboxes
+          .section__row.section__row--max
+            +checkbox({ value: 'Checkbox', isChecked: true })
+            +checkbox({ value: 'Checkbox SM', isDisabled: true }) Checkbox disabled
+            +checkbox({ size: 'sm' }) Checkbox SM
+            +checkbox({ size: 'lg' }) Checkbox LG
+
+        .section#radios
+          h2.section__title Radios
+          .section__row.section__row--max
+            +radio({ name: 'radio1', isChecked: true })
+            +radio({ name: 'radio1', isDisabled: true }) Radio disabled
+            +radio({ name: 'radio1', size: 'sm' }) Radio SM
+            +radio({ name: 'radio1', size: 'lg' }) Radio LG
+
+        .section#badges
+          h2.section__title Badges
+          .section__row.section__row--max
+            +badge({ var: 'primary', size: 'sm' }) Badge primary
+            +badge({ var: 'secondary', size: 'sm' }) Badge secondary

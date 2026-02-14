@@ -1,0 +1,53 @@
+.select {
+  @include select-reset;
+  border: 1px solid transparent;
+  transition: border var(--trans-base), background-color var(--trans-base), color var(--trans-base);
+  background: transparent;
+  width: 100%;
+  max-width: 100%;
+  // stylelint-disable-next-line property-no-unknown
+  field-sizing: content;
+
+  &:focus {
+    outline: none;
+  }
+
+  // variants
+  &--var-primary {
+    background: url('data:image/svg+xml,%3Csvg width="24" height="24" viewBox="0 0 24 24" stroke="%23000" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke-linecap="round" stroke-linejoin="round" d="M6 9L12 15L18 9"%3E%3C/path%3E%3C/svg%3E%0A') no-repeat right rem(4) center;
+    background-size: 24px 24px;
+    border-color: var(--color-black);
+    color: var(--color-black);
+  }
+
+  // sizes
+  &--size-base,
+  &--size-md {
+    @include field-base;
+    height: var(--field-md);
+    padding-left: rem(16);
+    padding-right: rem(16);
+  }
+
+  &--size-sm {
+    @include btn-base;
+    min-height: var(--field-sm);
+    min-width: var(--field-sm);
+    padding-left: rem(16);
+    padding-right: rem(16);
+  }
+
+  &--size-lg {
+    @include btn-base;
+    min-height: var(--field-lg);
+    min-width: var(--field-lg);
+    padding-left: rem(16);
+    padding-right: rem(16);
+  }
+
+  // states
+  &--has-error:hover,
+  &--has-error {
+    border-color: var(--color-error);
+  }
+}

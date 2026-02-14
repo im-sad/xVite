@@ -1,0 +1,21 @@
+.badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  text-transform: lowercase;
+
+  &--var-primary {
+    background: var(--color-main);
+  }
+
+  &--var-secondary {
+    background: var(--color-accent);
+    color: var(--color-white);
+  }
+
+  &--size-sm {
+    border-radius: rem(8);
+    padding: rem(2) rem(6);
+  }
+}
