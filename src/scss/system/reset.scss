@@ -1,7 +1,7 @@
 /* stylelint-disable declaration-no-important */
 /* stylelint-disable property-no-vendor-prefix */
 
-@media (prefers-reduced-motion: no-preference) {
+@include media(animate) {
   :root {
     scroll-behavior: smooth;
   }

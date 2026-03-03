@@ -335,7 +335,7 @@
     }
   }
 
-  @else if $media == animation {
+  @else if $media == animation or $media == animate {
     @media (prefers-reduced-motion: no-preference) {
       @content;
     }
