@@ -4,6 +4,9 @@
 
   display: none;
   opacity: 0;
+  transition: opacity var(--trans-tabs-length) ease,
+              display var(--trans-tabs-length) allow-discrete;
+  transition-behavior: allow-discrete;
 
   &.is-active {
     opacity: 1;
