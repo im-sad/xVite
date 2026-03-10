@@ -191,7 +191,7 @@ export default defineConfig(({ mode }) => {
       }),
       svgSpritemap({
         pattern: 'src/icns/*.svg',
-        currentColor: true,
+        // currentColor: true,
         filename: 'assets/img/sprite.svg'
       }),
       vituum(),
