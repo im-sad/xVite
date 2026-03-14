@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "3.0.0",
+    "@types/js-cookie": "^3.0.6",
     "@typescript-eslint/eslint-plugin": "8.13.0",
     "@typescript-eslint/parser": "8.13.0",
     "@vheemstra/vite-plugin-imagemin": "^2.0.0",
@@ -59,6 +60,7 @@
     "tippy.js": "^6.3.7",
     "js-cookie": "^3.*",
     "just-validate": "^4.*",
-    "swiper": "^11.*"
+    "swiper": "^11.*",
+    "tippy.js": "^6.*"
   }
 }
