@@ -7,7 +7,7 @@ mixin icn(props = {})
     const size = props.size
 
   svg.icn(
-    class=props.noFill && 'icn--no-fill'
+    class=props.hasFill && 'icn--fill'
     width=size || width
     height=size || height
     aria-hidden="true"
