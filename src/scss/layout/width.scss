@@ -1,7 +1,9 @@
 .width {
+  --width-gap: #{rem(20)};
+
   width: 100%;
-  max-width: calc(#{rem($width)} + (#{rem(20)} * 2));
+  max-width: calc(var(--width) + var(--width-gap) * 2);
   margin-inline: auto;
-  padding-inline: rem(20);
+  padding-inline: var(--width-gap);
   flex: 0 0 auto;
 }

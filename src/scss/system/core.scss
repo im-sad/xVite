@@ -2,6 +2,7 @@
 @use '@scss/system/vars' as v;
 
 :root {
+  --width: #{rem($width)};
   --scale-vw: calc(#{f.strip-unit(v.$media-fullhd)} / 100);
 
   --font-family: #{v.$font-family};
