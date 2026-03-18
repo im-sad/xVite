@@ -1,6 +1,6 @@
 :root {
   --hystmodal-speed: 0.2s;
-  --hystmodal-zindex: var(--zindex-modal, 77);
+  --hystmodal-zindex: var(--z-modal);
   --hystmodal-width: #{rem(600)};
   --hystmodal-overlay-bg: #000;
   --hystmodal-block-bg: #fff;
