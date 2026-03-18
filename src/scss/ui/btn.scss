@@ -67,24 +67,21 @@
     @include btn-base;
     min-height: var(--field-md);
     min-width: var(--field-md);
-    padding-left: rem(32);
-    padding-right: rem(32);
+    padding-inline: rem(32);
   }
 
   &--size-sm {
     @include btn-base;
     min-height: var(--field-sm);
     min-width: var(--field-sm);
-    padding-left: rem(32);
-    padding-right: rem(32);
+    padding-inline: rem(32);
   }
 
   &--size-lg {
     @include btn-base;
     min-height: var(--field-lg);
     min-width: var(--field-lg);
-    padding-left: rem(32);
-    padding-right: rem(32);
+    padding-inline: rem(32);
   }
 
   // mods
@@ -94,8 +91,7 @@
   }
 
   &--square {
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline: 0;
   }
 
   // elements
