@@ -4,4 +4,9 @@
   padding: rem(20) 0;
   background-color: var(--color-black);
   color: var(--color-white);
+
+  &__menu {
+    display: flex;
+    gap: rem(16);
+  }
 }

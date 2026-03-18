@@ -4,7 +4,7 @@ mixin header(props = {})
     .width
 
       .header__core
-        nav
+        nav.header__menu
           each item in dataMenu || []
             a(
               href=item.href
