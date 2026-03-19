@@ -99,7 +99,7 @@ export default defineConfig(({ mode }) => {
     base: './',
     resolve: {
       alias: {
-        '@animations': path.resolve(__dirname, 'src/animations'),
+        '@animations': path.resolve(__dirname, 'src/js/animations'),
         '@scss': path.resolve(__dirname, 'src/scss'),
         '@utils': path.resolve(__dirname, 'src/js/utils'),
         '@data': path.resolve(__dirname, 'src/js/data'),
