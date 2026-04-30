@@ -3,13 +3,14 @@
   navigation: auto;
 }
 
+:root {
+  interpolate-size: allow-keywords; // анимация auto значений
+}
+
 html {
   overscroll-behavior: none;
-
-  text-rendering: optimizeLegibility;
-  // оптимизация выравнивания шрифта относительно центра строки
-  // если по прежнему есть проблемы с выравниванием
-  // https://transfonter.org/ - включите настройку "Fix vertical metrics" и переконвертируйте шрифт
+  font-variant-numeric: tabular-nums; // цифры одинаковой ширины
+  text-rendering: optimizeLegibility; // выравнивания шрифта относительно центра строки
 }
 
 body {
