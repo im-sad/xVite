@@ -12,6 +12,7 @@ mixin textarea(props = {})
     class=variant
     class=size
     class=mod
+    inputmode=props.inputmode || 'text'
   )&attributes(attributes)
     if props.value
       =props.value
