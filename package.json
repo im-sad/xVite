@@ -19,9 +19,10 @@
     "preview": "vite preview",
     "lint:scss": "npx stylelint \"src/scss/**/*.scss\" --customSyntax postcss-scss",
     "lint:ts": "npx cross-env NODE_ENV=console eslint \"src/js/**/*.ts\"",
+    "lint:type": "tsc --noEmit",
     "lint:pug": "npx pug-lint \"src/pug/\"",
     "editorconfig": "npx editorconfig-cli",
-    "test": "npm run editorconfig && npm run lint:pug && npm run lint:scss && npm run lint:ts"
+    "test": "npm run editorconfig && npm run lint:pug && npm run lint:scss && npm run lint:ts && npm run lint:type"
   },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "3.0.0",
