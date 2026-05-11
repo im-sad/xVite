@@ -46,6 +46,8 @@
   }
 
   // states
+  &:user-invalid,
+  &:user-invalid:hover,
   &--has-error:hover,
   &--has-error {
     border-color: var(--color-error);
