@@ -20,6 +20,11 @@
     outline: none;
   }
 
+  &::spelling-error {
+    text-decoration: underline 1px wavy rgba(255, 42, 81, 1);
+    text-underline-offset: 3px;
+  }
+
   // variants
   &--var-primary {
     background: var(--color-bg-primary);
