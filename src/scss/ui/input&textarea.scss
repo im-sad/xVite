@@ -21,7 +21,7 @@
   }
 
   &::spelling-error {
-    text-decoration: underline 1px wavy rgba(255, 42, 81, 1);
+    text-decoration: underline 1px wavy var(--color-error);
     text-underline-offset: 3px;
   }
 
