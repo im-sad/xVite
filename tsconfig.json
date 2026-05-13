@@ -8,9 +8,7 @@
       "ES2017",
       "ES2021.String",
       "DOM",
-      "DOM.Iterable",
-      "es5",
-      "dom"
+      "DOM.Iterable"
     ],
     "skipLibCheck": true,
 
@@ -29,15 +27,10 @@
     "noImplicitAny": true,
 
     "typeRoots": [
-      "./js/types",
       "./node_modules/@types",
-      "./node_modules/@yandex/ymaps3-types"
     ],
     "baseUrl": "./src",
     "paths": {
-      "ymaps3": [
-        "./node_modules/@yandex/ymaps3-types"
-      ],
       "@animations/*": ["js/animations/*"],
       "@utils/*": ["js/utils/*"],
       "@data/*": ["js/data/*"],
