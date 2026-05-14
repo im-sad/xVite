@@ -4,6 +4,11 @@
   user-select: none;
   background: var(--color-muted);
 
+  &:has(img[src*='.png']),
+  &:has(img[src*='.webp']) {
+    background: transparent;
+  }
+
   img {
     display: inline-block;
     vertical-align: top;

@@ -1,4 +1,9 @@
 .img {
   user-select: none;
   background: var(--color-muted);
+
+  &[src*='.png'],
+  &[src*='.webp'] {
+    background: transparent;
+  }
 }
