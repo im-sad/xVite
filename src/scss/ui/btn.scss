@@ -43,6 +43,7 @@
 
   &.is-load &__loader {
     animation: scale 1s linear infinite;
+    opacity: 1;
   }
 
   &.is-load &__text {
@@ -110,5 +111,6 @@
     translate: -50% -50%;
     transform-origin: center;
     animation: scale 1s linear infinite;
+    opacity: 0;
   }
 }
