@@ -2,6 +2,7 @@
   user-select: none;
   background: var(--color-muted);
 
+  &[src*='.svg'],
   &[src*='.png'],
   &[src*='.webp'] {
     background: transparent;

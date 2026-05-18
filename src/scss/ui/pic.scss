@@ -4,6 +4,7 @@
   user-select: none;
   background: var(--color-muted);
 
+  &:has(img[src*='.svg']),
   &:has(img[src*='.png']),
   &:has(img[src*='.webp']) {
     background: transparent;
