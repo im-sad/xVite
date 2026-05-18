@@ -172,7 +172,7 @@ export default defineConfig(({ mode }) => {
       disableWebp(),
       viteImagemin({
         // verbose: false,
-        include: ['build/img/**/*.(png|jpg|svg)'],
+        include: ['build/assets/img/**/*.(png|jpg|svg)'],
         exclude: ['build/*.(png|jpg|svg)', '**/node_modules/**', '*/*/sprite.svg'],
         plugins: {
           jpg: imageminMozjpeg({quality: 80}),
