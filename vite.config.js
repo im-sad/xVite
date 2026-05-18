@@ -173,7 +173,7 @@ export default defineConfig(({ mode }) => {
       viteImagemin({
         // verbose: false,
         include: ['build/assets/img/**/*.(png|jpg|svg)'],
-        exclude: ['build/*.(png|jpg|svg)', '**/node_modules/**', '*/*/sprite.svg'],
+        exclude: ['build/assets/img/**/*.(png|jpg|svg)', '**/node_modules/**', '*/*/sprite.svg'],
         plugins: {
           jpg: imageminMozjpeg({quality: 80}),
           jpeg: imageminMozjpeg({quality: 80}),
