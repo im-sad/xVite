@@ -1,3 +1,4 @@
+import { animationMagnetic } from '@animations/animation-magnetic'
 import { animationStagger } from '@animations/animation-stagger'
 import { isIPhone12OrOlder } from '@utils/ios-checker'
 
@@ -7,4 +8,5 @@ export const initAnimations = () => {
   }
 
   animationStagger()
+  animationMagnetic()
 }
