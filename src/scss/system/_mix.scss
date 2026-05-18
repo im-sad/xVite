@@ -306,6 +306,12 @@
     }
   }
 
+  @else if $media == phone-after {
+    @media only screen and (max-width: calc(#{f.rem($media-phone - 1px)})) {
+      @content;
+    }
+  }
+
   @else if $media == phone-before {
     @media only screen and (min-width: calc(#{f.rem($media-phone + 1px)})) {
       @content;
