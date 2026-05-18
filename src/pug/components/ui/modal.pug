@@ -3,6 +3,7 @@ mixin modal(props = {})
   .hystmodal.modal(
     id=props.id
     class=props.mod && `hystmodal--${props.mod}`
+    class=props.size && `hystmodal--${props.size}`
     aria-hidden="true"
   )&attributes(attributes)
     .hystmodal__wrap
