@@ -7,7 +7,7 @@ export const animationMagnetic = () => {
 
   elements.forEach((item: HTMLElement) => {
     const strength = +(item.dataset.magneticStrength ?? magnetoStrength)
-    const duration = +(item.dataset.magneticDuration ?? magnetoDuration) 
+    const duration = +(item.dataset.magneticDuration ?? magnetoDuration)
 
     item.addEventListener('mousemove', (e: MouseEvent) => {
       const boundBox = item.getBoundingClientRect()
