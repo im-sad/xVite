@@ -1,6 +1,16 @@
 import Swiper from 'swiper'
 import { SwiperOptions } from 'swiper/types/swiper-options'
 
+const addExtraClasses = (swiper: Swiper) => {
+  const activeIndex = swiper.activeIndex
+
+  swiper.slides.forEach((slide: HTMLElement, index: number) => {
+    slide.classList.remove('swiper-slide-ahead', 'swiper-slide-behind')
+    index === activeIndex + 2 && slide.classList.add('swiper-slide-ahead')
+    index === activeIndex - 2 && slide.classList.add('swiper-slide-behind')
+  })
+}
+
 const getProgressPercent = (progress: number) => +((1 - progress).toFixed(2)) * 100
 
 const hasManySlides = (slider: HTMLElement) => slider.getElementsByClassName('swiper-slide').length >= 2
@@ -62,4 +72,4 @@ const createBreakpoint = (el: HTMLElement, params: SwiperOptions, media: string)
   breakpointChecker()
 }
 
-export { allSlidesVisible, getProgressPercent, hasManySlides, createBreakpoint }
+export { addExtraClasses, allSlidesVisible, getProgressPercent, hasManySlides, createBreakpoint }
