@@ -13,6 +13,7 @@ mixin textarea(props = {})
     class=size
     class=mod
     inputmode=props.inputmode || 'text'
+    autofocus=props.hasFocus
   )&attributes(attributes)
     if props.value
       =props.value

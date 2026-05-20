@@ -2,7 +2,7 @@ import Swiper from 'swiper'
 import { SwiperOptions } from 'swiper/types/swiper-options'
 
 const addExtraClasses = (swiper: Swiper) => {
-  const activeIndex = swiper.activeIndex
+  const activeIndex: number = swiper.activeIndex
 
   swiper.slides.forEach((slide: HTMLElement, index: number) => {
     slide.classList.remove('swiper-slide-ahead', 'swiper-slide-behind')
