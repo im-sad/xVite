@@ -27,6 +27,7 @@
         "/^function/",
         "/^return/",
         "/^each/",
+        "/^starting-style/",
       ]
     }],
     "function-no-unknown": [true, {
