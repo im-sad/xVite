@@ -8,6 +8,10 @@ block variables
 
     const items = [
       {
+        title: 'Colors',
+        href: '#colors'
+      },
+      {
         title: 'Buttons',
         href: '#buttons'
       },
@@ -42,6 +46,10 @@ block variables
       { title: 'Value 2', value: 'value2' }
     ]
 
+    const colors = [
+      'white', 'black', 'main', 'accent', 'muted', 'link', 'link-hover', 'error'
+    ]
+
 block main
   style
     include ../styles/ui-kit.css
@@ -55,6 +63,12 @@ block main
               a(href=item.href).links__link!=item.title
 
       .main
+        .section#colors
+          h2.section__title Colors
+          .section__row
+            each item in colors
+              span.color(style=`background: var(--color-${item})` title=`--color-${item}`)
+
         .section#buttons
           h2.section__title Buttons
           .section__row
