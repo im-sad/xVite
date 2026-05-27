@@ -23,14 +23,12 @@
     cursor: pointer;
   }
 
-  &:active,
-  &.is-active {
+  &:is(:active, .is-active) {
     outline: none;
     scale: 0.98;
   }
 
-  &:disabled,
-  &.is-disabled {
+  &:is(:disabled, .is-disabled) {
     cursor: default;
     opacity: 0.7;
   }
@@ -106,7 +104,7 @@
   }
 
   &__loader {
-    @include square(rem(16));
+    @include square(1.5cap);
     position: absolute;
     top: 50%;
     left: 50%;

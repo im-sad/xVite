@@ -2,12 +2,15 @@
   @include textBase;
   overflow: hidden;
   padding-block: rem(32);
+  background: radial-gradient(125% 125% at 50% 90%, #fff 40%, #6366f1 100%);
 
   h1 {
     @include titleH1;
   }
 
-  img {
-    animation: scale 4s linear infinite;
+  @include media(animate) {
+    img {
+      animation: scale 4s linear infinite;
+    }
   }
 }
