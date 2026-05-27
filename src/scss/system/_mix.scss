@@ -126,6 +126,11 @@
   // stylelint-enable
 }
 
+@mixin soft-radius($radius: 0) {
+  clip-path: inset(0 0 round $radius $radius $radius $radius);
+  filter: drop-shadow(0 0 0 #fff);
+}
+
 @mixin better-fonts() {
   // For dark backgrounds
   -webkit-font-smoothing: antialiased;
@@ -342,7 +347,7 @@
     }
   }
 
-  @else if $media == animation or $media == animate {
+  @else if $media == animation or $media == animate or $media == ani {
     @media (prefers-reduced-motion: no-preference) {
       @content;
     }
