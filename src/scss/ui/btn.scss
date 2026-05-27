@@ -38,12 +38,16 @@
   &.is-load {
     pointer-events: none;
     opacity: 0.7;
-    // color: transparent;
   }
 
   &.is-load &__loader {
-    animation: scale 1s linear infinite;
     opacity: 1;
+  }
+
+  @include media(animate) {
+    &.is-load &__loader {
+      animation: scale 1s linear infinite;
+    }
   }
 
   &.is-load &__text {
