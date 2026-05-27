@@ -77,6 +77,13 @@
     margin: rem(50) auto;
   }
 
+  @starting-style {
+    &__window {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+  }
+
   &--animated &__window {
     transition: transform var(--hystmodal-speed) ease 0s, opacity var(--hystmodal-speed) ease 0s;
   }
