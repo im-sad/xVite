@@ -69,8 +69,7 @@
     flex-shrink: 0;
     flex-grow: 0;
     background: var(--hystmodal-block-bg);
-    width: var(--hystmodal-width, 600px);
-    max-width: 100%;
+    width: min(100%, var(--hystmodal-width, 600px));
     overflow: visible;
     transform: scale(0.95);
     opacity: 0;
