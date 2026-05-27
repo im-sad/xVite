@@ -1,8 +1,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  place-items: center flex-start;
   min-height: dvh(100);
 
   &__core {
