@@ -8,7 +8,7 @@ export const initMask = () => {
 
   inputsTel.forEach((input: HTMLInputElement) => {
     const form = input.closest('form')
-    const telMask = new (IMask as any)(input, {
+    const telMask = IMask(input, {
       mask: '+{7} (000) 000-00-00'
     })
     const initialValue = telMask.value
@@ -22,7 +22,7 @@ export const initMask = () => {
 
   // https://codepen.io/denkako/pen/LYmwdPJ
   inputsMail.forEach((input: HTMLInputElement) => {
-    const mainMask = new (IMask as any)(input, {
+    const mainMask = IMask(input, {
       mask: (value: string) => {
         if (/^[a-z0-9_.-]+$/.test(value)) {
           return true
@@ -59,7 +59,7 @@ export const initMask = () => {
   })
 
   inputsDate.forEach((input: HTMLInputElement) => {
-    const dateMask = new (IMask as any)(input, {
+    const dateMask = IMask(input, {
       mask: Date,
       min: new Date(),
       max: new Date(2099, 0, 1),
@@ -70,7 +70,7 @@ export const initMask = () => {
   })
 
   inputsName.forEach((input: HTMLInputElement) => {
-    const inputMasked = new (IMask as any)(input, {
+    const inputMasked = IMask(input, {
       mask: /^[A-Za-zА-Яа-я\s-]+$/
     })
 
