@@ -1,17 +1,33 @@
+[data-tabs-blocks] {
+  display: grid;
+  grid-template: 1fr / 1fr;
+}
+
 [data-tabs-blocks] > * {
   --tabs-display: block;
   --trans-tabs-length: 0.3s;
 
-  display: none;
+  grid-area: 1 / 1;
   opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transform: translateX(-20px);
   transition:
-    opacity var(--trans-tabs-length) ease,
-    display var(--trans-tabs-length) allow-discrete;
+    visible var(--trans-tabs-length) var(--trans-tabs-timing),
+    opacity var(--trans-tabs-length) var(--trans-tabs-timing),
+    transform var(--trans-tabs-length) var(--trans-tabs-timing);
   transition-behavior: allow-discrete;
+  will-change: opacity, transform;
 
   &.is-active {
     opacity: 1;
-    display: var(--tabs-display);
-    animation: display-none var(--trans-tabs-length) ease;
+    max-height: unset;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  @starting-style {
+    opacity: 0;
   }
 }
