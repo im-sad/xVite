@@ -7,7 +7,12 @@ mixin modal(props = {})
     aria-hidden="true"
   )&attributes(attributes)
     .hystmodal__wrap
-      .hystmodal__window(role="dialog" aria-modal="true")
+      .hystmodal__window(
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby=props.title
+        aria-describedby=props.description
+      )
         unless props.noClose
           button(type="button" data-hystclose).hystmodal__close &times;
 
