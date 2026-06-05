@@ -1,6 +1,10 @@
 @use 'sass:math';
 @use '@scss/system/vars' as v;
 
+@function opacity($color, $opacity) {
+  @return color-mix(in srgb, $color $opacity, transparent);
+}
+
 @function rem($fz) {
   @return #{calc(strip-unit($fz) / strip-unit(v.$font-base-size))}rem;
 }
