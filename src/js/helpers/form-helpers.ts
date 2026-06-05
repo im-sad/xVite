@@ -4,7 +4,7 @@ import { formatBytes } from '@helpers/string-helpers'
 import { formErrors } from '@data/lang'
 
 const getPhone = (form: HTMLElement): void => {
-  const phone = localStorage.getItem('phone')
+  const phone: string | null = localStorage.getItem('phone')
   const phoneInput: HTMLInputElement | null = form.querySelector('.js-tel')
 
   if (phone && phoneInput) {
@@ -13,7 +13,7 @@ const getPhone = (form: HTMLElement): void => {
 }
 
 const savePhone = (form: HTMLElement): void => {
-  const phone = localStorage.getItem('phone')
+  const phone: string | null = localStorage.getItem('phone')
   const phoneInput: HTMLInputElement | null = form.querySelector('.js-tel')
 
   if (!phone && phoneInput?.value) {
