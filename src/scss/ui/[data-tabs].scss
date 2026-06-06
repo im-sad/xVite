@@ -12,7 +12,7 @@
   max-height: 0;
   overflow: hidden;
   visibility: hidden;
-  transform: translateX(-20px);
+  transform: translateX(#{rem(-20)});
   transition:
     visible var(--trans-tabs-length) var(--trans-tabs-timing),
     opacity var(--trans-tabs-length) var(--trans-tabs-timing),
