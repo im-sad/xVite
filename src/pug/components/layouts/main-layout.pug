@@ -31,10 +31,7 @@ html(lang="ru")
     .page(class=pageMods && `page--${pageMods}`)
       .page__core
         if hasHeader
-          +header({
-            mod: headerMods,
-            currentUrl: currentUrl
-          })
+          +header({ mod: headerMods })
 
         block main
 
