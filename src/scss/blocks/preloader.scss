@@ -1,15 +1,11 @@
 .preloader {
+  @include absolute-layer;
   @include blur(10px);
   display: grid;
   place-items: center;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 9;
-  width: 100%;
-  height: 100%;
+  z-index: var(-z-preloader);
   user-select: none;
-  background: rgba(var(--color-white), 0.6);
+  background: opacity(var(--color-white), 60%);
 
   &.is-hidden {
     display: none;
