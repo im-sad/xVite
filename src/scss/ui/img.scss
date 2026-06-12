@@ -2,6 +2,15 @@
   user-select: none;
   background: var(--color-muted);
 
+  &[loading='lazy'] {
+    opacity: 0;
+    transition: opacity var(--trans-fast);
+  }
+
+  &[loading='lazy'].is-loaded {
+    opacity: 1;
+  }
+
   &[src*='.svg'],
   &[src*='.png'],
   &[src*='.webp'] {
