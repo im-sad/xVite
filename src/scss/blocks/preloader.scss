@@ -3,9 +3,10 @@
   @include blur(10px);
   display: grid;
   place-items: center;
-  z-index: var(-z-preloader);
+  z-index: var(--z-preloader);
   user-select: none;
   background: opacity(var(--color-white), 60%);
+  isolation: isolate;
 
   &.is-hidden {
     display: none;
