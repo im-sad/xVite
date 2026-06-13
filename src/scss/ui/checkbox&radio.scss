@@ -14,6 +14,7 @@
   // line-height: var(--control-size);
   min-height: var(--control-size);
   user-select: none;
+  isolation: isolate;
 
   &__title {
     padding-left: calc(var(--control-size) + var(--control-gap));

@@ -14,6 +14,7 @@
   transition: background var(--trans-base), color var(--trans-base);
   text-overflow: ellipsis;
   user-select: none;
+  isolation: isolate;
 
   // states
   &:hover:not(:disabled),
