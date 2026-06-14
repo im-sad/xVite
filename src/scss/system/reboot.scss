@@ -4,8 +4,10 @@
   navigation: auto; // анимация при переходе между страницами
 }
 
-:root {
-  interpolate-size: allow-keywords; // анимация auto значений
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords; // анимация auto значений
+  }
 }
 
 html {
