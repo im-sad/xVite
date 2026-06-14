@@ -64,8 +64,12 @@ export default class Tabs {
 
   private _resetActive() {
     Array.from(this._switchers).forEach((switcher, i) => {
-      switcher.classList.remove(this.options.activeClass!)
-      this._tabs[i] && this._tabs[i].classList.remove(this.options.activeClass!)
+      this._isSwitcherExists(i) && switcher.classList.remove(this.options.activeClass!)
+
+      if (this._isTabExists(i)) {
+        this._tabs[i].classList.remove(this.options.activeClass!)
+        this._tabs[i].setAttribute('tabindex', '-1')
+      }
     })
   }
 
@@ -84,7 +88,12 @@ export default class Tabs {
     this._resetActive()
     this.activeTabIndex = index
     this._isSwitcherExists(index) && this._switchers[index].classList.add(this.options.activeClass!)
-    this._isTabExists(index) && this._tabs[index].classList.add(this.options.activeClass!)
+
+    if (this._isTabExists(index)) {
+      this._tabs[index].classList.add(this.options.activeClass!)
+      this._tabs[index].setAttribute('tabindex', '0')
+    }
+
     if (typeof this.options.afterChange === 'function') {
       const delay = this.getTransitionDuration()
 

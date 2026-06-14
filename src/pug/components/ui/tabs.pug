@@ -1,0 +1,24 @@
+mixin tabs(props = {})
+
+  .tabs(data-tabs=props.name)&attributes(attributes)
+    .tabs__switchers(
+      role="tablist"
+      aria-label=props.label
+      aria-labelledby="tabs-label"
+      data-tabs-switchers
+    )
+      each item, index in props.items
+        button.tabs__switcher-button(
+          role="tab"
+          aria-controls=`${props.name ? 'tabpanel-' + props.name : 'tabpanel'}-${index}`
+          data-tabs-switcher
+        )
+          !=item.title
+
+    .tabs__blocks(data-tabs-blocks)
+      each item, index in props.items
+        .tabs__block(
+          role="tabpanel"
+          id=`${props.name ? 'tabpanel-' + props.name : 'tabpanel'}-${index}`
+        )
+          !=item.content
