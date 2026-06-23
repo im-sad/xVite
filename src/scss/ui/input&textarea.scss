@@ -25,6 +25,12 @@
     text-underline-offset: 3px;
   }
 
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border-radius: inherit;
+  }
+
   // variants
   &--var-primary {
     background: var(--color-bg-primary);
