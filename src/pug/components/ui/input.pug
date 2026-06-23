@@ -5,6 +5,7 @@ mixin input(props = {})
     const variant = props.var && `input--var-${props.var}`
     const size = props.size && `input--size-${props.size}`
     const mod = props.mod && `input--${props.mod}`
+    const isSpellCheckOff = props.isEmail || props.isMail || props.isPhone || props.isTel
     let inputmode = 'text'
 
     if (props.isPhone || props.isTel) inputmode = 'tel'
@@ -31,5 +32,6 @@ mixin input(props = {})
     disabled=props.isDisabled
     pattern=props.pattern
     autocapitalize="off"
+    spellcheck=isSpellCheckOff ? 'false' : props.spellcheck
     inputmode=inputmode
   )&attributes(attributes)
