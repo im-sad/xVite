@@ -70,10 +70,10 @@
 @mixin line-clamp($lines: 3) {
   @if $lines == 0 {
     display: block;
-    /* autoprefixer: off */
+    // stylelint-disable
     -webkit-line-clamp: none;
     -webkit-box-orient: initial;
-    /* autoprefixer: on */
+    // stylelint-enable
     overflow: unset;
     text-overflow: unset;
     word-wrap: unset;
@@ -81,11 +81,9 @@
 
   @else {
     // stylelint-disable
-    /* autoprefixer: off */
     display: -webkit-box;
     -webkit-line-clamp: $lines;
     -webkit-box-orient: vertical;
-    /* autoprefixer: on */
     // stylelint-enable
     overflow: hidden;
     text-overflow: ellipsis;
