@@ -142,7 +142,7 @@ export default defineConfig(({ mode }) => {
       outDir: 'build',
       minify: isProd,
       emptyOutDir: true,
-      sourcemap: true,
+      sourcemap: !isProd,
       rollupOptions: {
         input: globSync('./src/pug/pages/*.pug', { posix: true }),
         output: {
