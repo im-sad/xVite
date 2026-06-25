@@ -140,7 +140,7 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       outDir: 'build',
-      minify: isProd,
+      minify: false,
       emptyOutDir: true,
       sourcemap: !isProd,
       rollupOptions: {
@@ -198,7 +198,10 @@ export default defineConfig(({ mode }) => {
       vituum(),
       sassGlobImports(),
       pug({
-        root: './src/pug/pages'
+        root: './src/pug/pages',
+        options: {
+          pretty: true
+        }
       }),
       pages({
         dir: './src/pug/pages',
