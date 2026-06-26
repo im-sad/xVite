@@ -5,6 +5,7 @@ mixin img(props = {})
     const name = props.name || ''
     const alt = props.alt || ''
     const format = props.format || 'jpg'
+    const isImportand = props.isImportand ? 'high' : undefined
 
   img.img(
     src= name ? `assets/img/${path}/${name}.${format}` : ''
@@ -15,5 +16,5 @@ mixin img(props = {})
     loading= props.isLazy && 'lazy'
     draggable="false"
     decoding= props.isAsync && 'async'
-    fetchpriority= props.fetchpriority
+    fetchpriority= props.fetchpriority || isImportand
   )&attributes(attributes)

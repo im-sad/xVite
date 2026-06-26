@@ -4,6 +4,7 @@ mixin pic(props = {})
     const name = props.name || ''
     const format = props.format || 'jpg'
     const sources = props.sources || []
+    const isImportand = props.isImportand ? 'high' : undefined
 
   picture.pic&attributes(attributes)
     each source in sources
@@ -36,5 +37,5 @@ mixin pic(props = {})
       loading=props.isLazy && 'lazy'
       draggable="false"
       decoding= props.isAsync && 'async'
-      fetchpriority= props.fetchpriority
+      fetchpriority= props.fetchpriority || isImportand
     )
