@@ -15,7 +15,6 @@ function getScrollbarWidth() {
   const widthNoScroll = outer.offsetWidth
   outer.style.overflow = 'scroll'
 
-  // add inner div
   const inner = document.createElement('div')
   inner.style.width = '100%'
   outer.appendChild(inner)
