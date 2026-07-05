@@ -5,4 +5,5 @@
   padding: var(--space-xl) 0;
   width: 100%;
   background-color: var(--color-muted);
+  bottom: min(0px, calc(100vh - var(--footer-height, 0px)));
 }
