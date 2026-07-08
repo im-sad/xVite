@@ -14,6 +14,10 @@ mixin modal(props = {})
         aria-describedby=props.description
       )
         unless props.noClose
-          button(type="button" data-hystclose).hystmodal__close &times;
+          button(
+            type="button"
+            data-hystclose
+            aria-label="Закрыть модальное окно"
+          ).hystmodal__close &times;
 
         block
