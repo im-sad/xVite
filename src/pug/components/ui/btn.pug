@@ -18,9 +18,11 @@ mixin btn(props = {})
     class=props.isDisabled && props.href && 'is-disabled'
     class=props.isLoad && 'is-load'
     aria-label=props.ariaLabel
+    aria-haspopup=props.modal && "dialog"
     title=props.title
     role=props.role || (props.href ? 'button' : false)
     disabled=props.href ? false : props.isDisabled
+    data-open-modal=props.modal && `#modal-${props.modal}`
   )&attributes(attributes)
     if props.hasLoad
       .btn__loader
