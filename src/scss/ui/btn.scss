@@ -96,6 +96,20 @@
 
   &--square {
     padding-inline: 0;
+    overflow: hidden;
+  }
+
+  &--square#{&}--size-base,
+  &--square#{&}--size-md {
+    width: var(--field-md);
+  }
+
+  &--square#{&}--size-sm {
+    width: var(--field-sm);
+  }
+
+  &--square#{&}--size-lg {
+    width: var(--field-lg);
   }
 
   // elements
