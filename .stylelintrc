@@ -28,7 +28,6 @@
         "/^return/",
         "/^each/",
         "/^starting-style/",
-        "/^text-box/",
       ]
     }],
     "property-no-unknown": [true, {
@@ -44,7 +43,6 @@
         "ls",
         "unit-from",
         "strip-unit",
-        "text-box",
         "from-percent-to-abs",
         "letter-spacing",
         "darken",
