@@ -5,3 +5,7 @@
 .visually-hidden {
   @include visually-hidden;
 }
+
+.text-box {
+  text-box: trim-both cap alphabetic;
+}
