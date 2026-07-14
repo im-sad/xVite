@@ -1,5 +1,6 @@
 .checkbox,
 .radio {
+  --radius-control: #{rem(4)};
   --color-bg-control: #fff;
   --color-bd-control: #ccc;
   --color-bg-disabled: #eee;
@@ -61,9 +62,12 @@
     background: var(--color-bg-control);
     left: 0;
     top: 0;
-    border-radius: 3px;
     border: 1px solid var(--color-bd-control);
     transition: all var(--trans-base);
+  }
+
+  &--mod-rounded &__title::before {
+    border-radius: var(--radius-control);
   }
 
   &__title::after {
