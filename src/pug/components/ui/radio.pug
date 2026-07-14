@@ -2,10 +2,14 @@ mixin radio(props = {})
   -
     const variant = props.variant && `radio--var-${props.var}`
     const size = props.size && `radio--size-${props.size}`
+    const mod = props.mod && (Array.isArray(props.mod)
+      ? props.mod.filter(Boolean).map(mod => `radio--mod-${mod}`).join(' ')
+      : `radio--mod-${props.mod}`)
 
   #{props.noLabel ? 'div' : 'label'}.radio(
     class=variant
     class=size
+    class=mod
   )&attributes(attributes)
     input(
       id=props.id
