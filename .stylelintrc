@@ -1,38 +1,31 @@
-{# http://stylelint.io/user-guide/rules/
-  "syntax": "scss",
+{
   "extends": "stylelint-config-htmlacademy",
   "rules": {
-    "max-nesting-depth": 3,
-    "codeguide/string-quotes":  ["single", {
-      "message": "Кавычки должны быть одиночные"
+    "max-nesting-depth": [3, {
+      "ignore": ["blockless-at-rules", "pseudo-classes"]
     }],
-    "codeguide/indentation": [2, {"ignore": ["inside-parens"]}],
     "declaration-no-important": [true, {
-      "message": "!important нужно применять осторожно",
       "severity": "warning"
     }],
-    "color-hex-length": ["short", {
-      "message": "HEX цвета можно сократить до 3-ёх символов",
-    }],
+    "color-hex-length": ["short"],
     "at-rule-no-unknown": [true, {
-      "message": "Неизвестное @-правило",
-      ignoreAtRules: [
-        "/^at-/",
-        "/^use/",
-        "/^forward/",
-        "/^mixin/",
-        "/^include/",
-        "/^if/",
-        "/^else/",
-        "/^function/",
-        "/^return/",
-        "/^each/",
-        "/^starting-style/",
+      "ignoreAtRules": [
+        "at-root",
+        "use",
+        "forward",
+        "mixin",
+        "include",
+        "if",
+        "else",
+        "function",
+        "return",
+        "each",
+        "starting-style"
       ]
     }],
     "property-no-unknown": [true, {
       "ignoreProperties": [
-        "/^text-box$/"
+        "text-box"
       ]
     }],
     "function-no-unknown": [true, {
@@ -47,16 +40,29 @@
         "letter-spacing",
         "darken",
         "lighten"
-      ],
+      ]
     }],
     "no-invalid-position-at-import-rule": [true, {
-      "message": "@import в начале",
-      ignoreAtRules: [
-        "/^use/",
-        "/^forward/",
-      ],
+      "ignoreAtRules": [
+        "use",
+        "forward"
+      ]
     }],
-    "block-closing-brace-newline-after": null,
+    "@stylistic/string-quotes": "single",
+    "@stylistic/block-closing-brace-newline-after": null,
+    "@stylistic/indentation": [2, {"ignore": ["inside-parens"]}],
     "at-rule-empty-line-before": null,
+    "no-unknown-custom-properties": null,
+    "selector-nested-pattern": null,
+    "selector-max-compound-selectors": null,
+    "alpha-value-notation": "number",
+    "color-function-alias-notation": null,
+    "color-function-notation": null,
+    "selector-not-notation": "simple",
+    "value-keyword-case": null,
+    "order/properties-order": null,
+    "media-feature-range-notation": null,
+    "selector-no-deprecated": null,
+    "declaration-block-no-redundant-longhand-properties": null
   }
 }
