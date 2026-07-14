@@ -2,7 +2,9 @@ mixin textarea(props = {})
   -
     const variant = props.var && `textarea--var-${props.var}`
     const size = props.size && `textarea--size-${props.size}`
-    const mod = props.mod && `textarea--${props.mod}`
+    const mod = props.mod && (Array.isArray(props.mod)
+      ? props.mod.filter(Boolean).map((mod) => `textarea--mod-${mod}`).join(' ')
+      : `textarea--mod-${props.mod}`)
 
   textarea.textarea(
     name=props.name

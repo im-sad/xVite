@@ -4,7 +4,9 @@ mixin input(props = {})
     const isNumber = type === 'number'
     const variant = props.var && `input--var-${props.var}`
     const size = props.size && `input--size-${props.size}`
-    const mod = props.mod && `input--${props.mod}`
+    const mod = props.mod && (Array.isArray(props.mod)
+      ? props.mod.filter(Boolean).map((mod) => `input--mod-${mod}`).join(' ')
+      : `input--mod-${props.mod}`)
     const isSpellCheckOff = props.isEmail || props.isMail || props.isPhone || props.isTel
     let inputmode = 'text'
 
@@ -23,6 +25,7 @@ mixin input(props = {})
     class=variant
     class=size
     class=mod
+    class=props.isFloat && 'input--floating'
     class=(props.isEmail || props.isMail) && 'js-mail'
     class=(props.isPhone || props.isTel) && 'js-tel'
     required=props.isRequired
