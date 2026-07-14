@@ -5,7 +5,9 @@ mixin btn(props = {})
     const type = (props.type || tag === 'button') ? props.type || 'button' : false
     const size = props.size && `btn--size-${props.size}`
     const variant = props.var && `btn--var-${props.var}`
-    const mod = props.mod && `btn--${props.mod}`
+    const mod = props.mod && (Array.isArray(props.mod)
+      ? props.mod.filter(Boolean).map((mod) => `btn--mod-${mod}`).join(' ')
+      : `btn--mod-${props.mod}`)
 
   #{tag}.btn(
     href=props.href

@@ -89,26 +89,27 @@
   }
 
   // mods
-  &--fluid {
+  &--mod-fluid {
     width: 100%;
     display: flex;
   }
 
-  &--square {
+  &--mod-square {
     padding-inline: 0;
     overflow: hidden;
+    white-space: nowrap;
   }
 
-  &--square#{&}--size-base,
-  &--square#{&}--size-md {
+  &--mod-square#{&}--size-base,
+  &--mod-square#{&}--size-md {
     width: var(--field-md);
   }
 
-  &--square#{&}--size-sm {
+  &--mod-square#{&}--size-sm {
     width: var(--field-sm);
   }
 
-  &--square#{&}--size-lg {
+  &--mod-square#{&}--size-lg {
     width: var(--field-lg);
   }
 
