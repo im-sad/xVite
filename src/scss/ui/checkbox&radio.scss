@@ -150,6 +150,10 @@
     transform: scale(0);
   }
 
+  &--mod-square &__title::before {
+    border-radius: 0;
+  }
+
   // checked
   input:checked ~ &__title::after {
     opacity: 1;

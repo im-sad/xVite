@@ -2,10 +2,14 @@ mixin checkbox(props = {})
   -
     const variant = props.variant && `checkbox--var-${props.var}`
     const size = props.size && `checkbox--size-${props.size}`
+    const mod = props.mod && (Array.isArray(props.mod)
+      ? props.mod.filter(Boolean).map(mod => `checkbox--mod-${mod}`).join(' ')
+      : `checkbox--mod-${props.mod}`)
 
   #{props.noLabel ? 'div' : 'label'}.checkbox(
     class=variant
     class=size
+    class=mod
   )&attributes(attributes)
     input(
       id=props.id
