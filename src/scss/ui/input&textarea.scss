@@ -33,7 +33,7 @@
 
   // variants
   &--var-primary {
-    background: var(--color-bg-primary);
+    background: var(--color-white);
     border-color: var(--color-black);
     color: var(--color-black);
   }
@@ -43,29 +43,25 @@
   &--size-md {
     @include field-base;
     height: var(--field-md);
-    padding-left: rem(16);
-    padding-right: rem(16);
+    padding-inline: rem(16);
   }
 
   &--size-sm {
     @include btn-base;
     min-height: var(--field-sm);
     min-width: var(--field-sm);
-    padding-left: rem(16);
-    padding-right: rem(16);
+    padding-inline: rem(16);
   }
 
   &--size-lg {
     @include btn-base;
     min-height: var(--field-lg);
     min-width: var(--field-lg);
-    padding-left: rem(16);
-    padding-right: rem(16);
+    padding-inline: rem(16);
   }
 
   @at-root {
-    textarea#{&}--size-md,
-    textarea#{&}--size-base {
+    textarea#{&}--size-md {
       min-height: calc(var(--field-md) * 2);
     }
   }

@@ -90,7 +90,6 @@
   }
 
   // sizes
-  &--size-base,
   &--size-md {
     @include btn-base;
     min-height: var(--btn-size-md);
