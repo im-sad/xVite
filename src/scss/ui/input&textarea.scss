@@ -8,7 +8,6 @@
   transition: border var(--trans-base), background-color var(--trans-base), color var(--trans-base), box-shadow var(--trans-base);
   background: transparent;
   width: 100%;
-  resize: none;
   text-overflow: ellipsis;
 
   @at-root textarea#{&} {
@@ -22,6 +21,10 @@
 
   &:focus {
     outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 
   &::spelling-error {
@@ -53,7 +56,7 @@
   // sizes
   &--size-md {
     @include field-base;
-    height: var(--input-size-md);
+    min-height: var(--input-size-md);
     padding-inline: rem(12);
   }
 
@@ -72,17 +75,30 @@
   }
 
   @at-root {
+    #{&}textarea {
+      height: unset;
+      resize: vertical;
+    }
+
     textarea#{&}--size-md {
       min-height: calc(var(--input-size-md) * 2);
+      padding-block: rem(12 / 2);
     }
 
     textarea#{&}--size-sm {
       min-height: var(--input-size-md);
+      padding-block: rem(6 / 2);
     }
 
     textarea#{&}--size-lg {
       min-height: calc(var(--input-size-md) * 3);
+      padding-block: rem(14 / 2);
     }
+  }
+
+  // mod
+  &--mod-rounded {
+    border-radius: calc(infinity * 1px);
   }
 
   // states
