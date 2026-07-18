@@ -12,18 +12,36 @@
 
   &--floating &__title {
     position: absolute;
-    left: 3px;
+    left: 0;
     top: 50%;
     z-index: 1;
     transform: translate(0, -50%);
-    transition: transform var(--trans-base), top var(--trans-base), font-size var(--trans-base);
+    transform-origin: left bottom;
+    transition: transform var(--trans-base), top var(--trans-base), font-size var(--trans-base), padding var(--trans-base);
+    pointer-events: none;
+    will-change: padding, font-size, transform, top;
   }
 
   &--floating:has(input:focus) &__title,
   &--floating:has(input:not(:placeholder-shown)) &__title {
-    transform: translateY(-100%);
+    transform: translateY(-100%) scale(0.8);
     top: 0;
-    font-size: 0.8em;
+    padding-left: 0;
+  }
+
+  &--floating:has(.input--size-md) &__title {
+    @include field-base;
+    padding-left: rem(12);
+  }
+
+  &--floating:has(.input--size-sm) &__title {
+    @include field-sm;
+    padding-left: rem(6);
+  }
+
+  &--floating:has(.input--size-lg) &__title {
+    @include field-lg;
+    padding-left: rem(14);
   }
 
   &__wrapper {
@@ -36,7 +54,11 @@
   }
 
   &__error {
+    font-size: 0.8em;
+    padding-top: rem(2);
     display: none;
+    color: var(--color-error);
+    pointer-events: none;
   }
 
   &.has-error &__error {
