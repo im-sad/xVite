@@ -39,7 +39,6 @@
   }
 
   // sizes
-  &--size-base,
   &--size-md {
     @include field-base;
     height: var(--field-md);
