@@ -62,13 +62,13 @@ const renderButton = ({
   const selectedMods = Array.isArray(mod) ? mod : [mod]
   selectedMods.forEach((mod) => classes.push(`btn--mod-${mod}`))
   if (loading) classes.push('is-load')
+  if (disabled && link) classes.push('is-disabled')
 
   return link ? `<a
       href="#"
       onclick="return false;"
       class="${classes.join(' ')}"
       role="button"
-      ${disabled ? 'disabled' : ''}
     >
       ${loading ? '<div class="btn__loader"></div>' : ''}
       <span class="btn__text">${text}</span>
