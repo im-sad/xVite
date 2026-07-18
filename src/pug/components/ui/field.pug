@@ -2,8 +2,23 @@ mixin field(props = {})
   -
     const tag = props.isDiv ? 'div' : 'label'
     const error = props.error
+    const size = props.size && `field--size-${props.size}`
+    const variant = props.var && `field--var-${props.var}`
+    const mod = props.mod && (Array.isArray(props.mod)
+      ? props.mod.filter(Boolean).map((mod) => `field--mod-${mod}`).join(' ')
+      : `field--mod-${props.mod}`)
 
-  .field&attributes(attributes)
+  .field(
+    class=props.isFloat && 'field--floating'
+    class=size
+    class=mod
+    class=variant
+  )&attributes(attributes)
+    if props.title
+      #{props.isDiv ? 'label' : 'div'}.field__title(
+        for=props.name
+      )!=props.title
+
     #{tag}.field__wrapper
       block
 
