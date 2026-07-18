@@ -50,14 +50,14 @@
   }
 
   &--size-sm {
-    @include field-base;
+    @include field-sm;
     min-height: var(--input-size-sm);
     min-width: var(--input-size-sm);
     padding-inline: rem(6);
   }
 
   &--size-lg {
-    @include field-base;
+    @include field-lg;
     min-height: var(--input-size-lg);
     min-width: var(--input-size-lg);
     padding-inline: rem(14);

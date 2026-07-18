@@ -98,14 +98,14 @@
   }
 
   &--size-sm {
-    @include btn-base;
+    @include btn-sm;
     min-height: var(--btn-size-sm);
     min-width: var(--btn-size-sm);
     padding-inline: rem(32);
   }
 
   &--size-lg {
-    @include btn-base;
+    @include btn-lg;
     min-height: var(--btn-size-lg);
     min-width: var(--btn-size-lg);
     padding-inline: rem(32);

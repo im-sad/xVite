@@ -29,21 +29,21 @@
     @include field-base;
     height: var(--select-size-md);
     min-width: var(--select-size-md);
-    padding-inline: rem(16);
+    padding-inline: rem(12);
   }
 
   &--size-sm {
-    @include btn-base;
+    @include field-sm;
     min-height: var(--select-size-sm);
     min-width: var(--select-size-sm);
-    padding-inline: rem(16);
+    padding-inline: rem(6);
   }
 
   &--size-lg {
-    @include btn-base;
+    @include field-lg;
     min-height: var(--select-size-lg);
     min-width: var(--select-size-lg);
-    padding-inline: rem(16);
+    padding-inline: rem(14);
   }
 
   // states

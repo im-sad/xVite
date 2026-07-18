@@ -21,3 +21,11 @@
 @mixin field-base {
   @include m.font-size(16px, 24px);
 }
+
+@mixin field-sm {
+  @include m.font-size(12px, 18px);
+}
+
+@mixin field-lg {
+  @include m.font-size(22px, 28px);
+}
