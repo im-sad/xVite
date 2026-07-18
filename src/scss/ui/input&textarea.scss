@@ -41,11 +41,11 @@
     border-color: var(--color-black);
     color: var(--color-black);
 
-    &:hover:not(:focus) {
+    &:hover:not(:focus):not(:disabled) {
       border-color: opacity(var(--color-black), 40%);
     }
 
-    &:focus {
+    &:focus:not(:disabled) {
       box-shadow: 0 0 0 3px opacity(var(--color-black), 10%);
     }
   }
