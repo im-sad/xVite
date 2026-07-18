@@ -24,7 +24,7 @@
     cursor: pointer;
   }
 
-  &:is(:active, .is-active) {
+  &:is(:active, .is-active):not(:disabled):not(.is-disabled) {
     outline: none;
     scale: 0.98;
   }
@@ -69,22 +69,22 @@
   &--size-base,
   &--size-md {
     @include btn-base;
-    min-height: var(--field-md);
-    min-width: var(--field-md);
+    min-height: var(--btn-size-md);
+    min-width: var(--btn-size-md);
     padding-inline: rem(32);
   }
 
   &--size-sm {
     @include btn-base;
-    min-height: var(--field-sm);
-    min-width: var(--field-sm);
+    min-height: var(--btn-size-sm);
+    min-width: var(--btn-size-sm);
     padding-inline: rem(32);
   }
 
   &--size-lg {
     @include btn-base;
-    min-height: var(--field-lg);
-    min-width: var(--field-lg);
+    min-height: var(--btn-size-lg);
+    min-width: var(--btn-size-lg);
     padding-inline: rem(32);
   }
 
@@ -102,15 +102,15 @@
 
   &--mod-square#{&}--size-base,
   &--mod-square#{&}--size-md {
-    width: var(--field-md);
+    width: var(--btn-size-md);
   }
 
   &--mod-square#{&}--size-sm {
-    width: var(--field-sm);
+    width: var(--btn-size-sm);
   }
 
   &--mod-square#{&}--size-lg {
-    width: var(--field-lg);
+    width: var(--btn-size-lg);
   }
 
   // elements
