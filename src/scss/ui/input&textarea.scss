@@ -46,21 +46,21 @@
   &--size-md {
     @include field-base;
     height: var(--input-size-md);
-    padding-inline: rem(16);
+    padding-inline: rem(12);
   }
 
   &--size-sm {
     @include field-base;
     min-height: var(--input-size-sm);
     min-width: var(--input-size-sm);
-    padding-inline: rem(16);
+    padding-inline: rem(6);
   }
 
   &--size-lg {
     @include field-base;
     min-height: var(--input-size-lg);
     min-width: var(--input-size-lg);
-    padding-inline: rem(16);
+    padding-inline: rem(14);
   }
 
   @at-root {
