@@ -1,4 +1,8 @@
 .select {
+  --select-size-md: var(--field-md);
+  --select-size-sm: var(--field-sm);
+  --select-size-lg: var(--field-lg);
+
   @include select-reset;
   border: 1px solid transparent;
   transition: border var(--trans-base), background-color var(--trans-base), color var(--trans-base);
@@ -23,21 +27,22 @@
   // sizes
   &--size-md {
     @include field-base;
-    height: var(--field-md);
+    height: var(--select-size-md);
+    min-width: var(--select-size-md);
     padding-inline: rem(16);
   }
 
   &--size-sm {
     @include btn-base;
-    min-height: var(--field-sm);
-    min-width: var(--field-sm);
+    min-height: var(--select-size-sm);
+    min-width: var(--select-size-sm);
     padding-inline: rem(16);
   }
 
   &--size-lg {
     @include btn-base;
-    min-height: var(--field-lg);
-    min-width: var(--field-lg);
+    min-height: var(--select-size-lg);
+    min-width: var(--select-size-lg);
     padding-inline: rem(16);
   }
 

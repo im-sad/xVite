@@ -1,5 +1,9 @@
 .input,
 .textarea {
+  --input-size-md: var(--field-md);
+  --input-size-sm: var(--field-sm);
+  --input-size-lg: var(--field-lg);
+
   border: 1px solid transparent;
   transition: border var(--trans-base), background-color var(--trans-base), color var(--trans-base);
   background: transparent;
@@ -41,39 +45,35 @@
   // sizes
   &--size-md {
     @include field-base;
-    height: var(--field-md);
+    height: var(--input-size-md);
     padding-inline: rem(16);
   }
 
   &--size-sm {
-    @include btn-base;
-    min-height: var(--field-sm);
-    min-width: var(--field-sm);
+    @include field-base;
+    min-height: var(--input-size-sm);
+    min-width: var(--input-size-sm);
     padding-inline: rem(16);
   }
 
   &--size-lg {
-    @include btn-base;
-    min-height: var(--field-lg);
-    min-width: var(--field-lg);
+    @include field-base;
+    min-height: var(--input-size-lg);
+    min-width: var(--input-size-lg);
     padding-inline: rem(16);
   }
 
   @at-root {
     textarea#{&}--size-md {
-      min-height: calc(var(--field-md) * 2);
+      min-height: calc(var(--input-size-md) * 2);
     }
-  }
 
-  @at-root {
     textarea#{&}--size-sm {
-      min-height: var(--field-md);
+      min-height: var(--input-size-md);
     }
-  }
 
-  @at-root {
     textarea#{&}--size-lg {
-      min-height: calc(var(--field-md) * 3);
+      min-height: calc(var(--input-size-md) * 3);
     }
   }
 
