@@ -12,6 +12,8 @@ dist
 dist-ssr
 src/pug/components/_auto-import.pug
 node_modules
+storybook-static
+.mimocode
 *.local
 *.ai
 *.log
