@@ -1,5 +1,9 @@
-const { join } = require('path')
-const { mergeConfig } = require('vite')
+import { fileURLToPath } from 'node:url'
+import { dirname, join } from 'node:path'
+import { mergeConfig } from 'vite'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 /** @type { import('@storybook/html-vite').StorybookConfig } */
 const config = {
@@ -32,4 +36,4 @@ const config = {
   },
 }
 
-module.exports = config
+export default config
