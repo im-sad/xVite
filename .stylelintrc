@@ -31,13 +31,13 @@
     "function-no-unknown": [true, {
       "ignoreFunctions": [
         "dvh",
-        "size",
         "lh",
         "ls",
         "unit-from",
         "strip-unit",
         "from-percent-to-abs",
         "letter-spacing",
+        "opacity",
         "darken",
         "lighten"
       ]
