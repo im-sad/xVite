@@ -3,6 +3,8 @@
   place-items: center;
   user-select: none;
   text-transform: lowercase;
+  min-width: max-content;
+  flex: 0 0 auto;
 
   &--var-primary {
     background: var(--color-main);
@@ -13,8 +15,20 @@
     color: var(--color-white);
   }
 
+  &--size-md {
+    border-radius: rem(4);
+    padding: rem(6) rem(12);
+  }
+
   &--size-sm {
+    font-size: 0.8em;
     border-radius: rem(4);
     padding: rem(2) rem(6);
+  }
+
+  &--size-lg {
+    font-size: 1.6em;
+    border-radius: rem(4);
+    padding: rem(10) rem(12);
   }
 }
