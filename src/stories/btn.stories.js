@@ -32,7 +32,7 @@ export default {
     },
     mod: {
       control: { type: 'inline-check' },
-      options: ['square', 'fluid'],
+      options: ['square', 'fluid', 'rounded'],
       description: 'Модификатор',
       table: {
         type: { summary: 'Array<"square" | "fluid">' }

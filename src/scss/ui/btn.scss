@@ -123,6 +123,10 @@
     white-space: nowrap;
   }
 
+  &--mod-rounded {
+    border-radius: calc(infinity * 1px);
+  }
+
   &--mod-square#{&}--size-md {
     width: var(--btn-size-md);
   }
