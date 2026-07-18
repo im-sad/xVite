@@ -14,6 +14,7 @@ npm run lint:ts       # ESLint для TypeScript
 npm run lint:pug      # Pug-lint
 npm run lint:type     # TypeScript type checking
 npm run editorconfig  # EditorConfig проверка
+npm run storybook     # Запуск storybook
 ```
 
 ## Структура проекта
