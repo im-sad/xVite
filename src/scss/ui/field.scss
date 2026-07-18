@@ -2,9 +2,28 @@
   width: 100%;
   display: block;
   flex: 0 0 auto;
+  position: relative;
+  isolation: isolate;
 
   &__title {
     display: block;
+    margin-bottom: rem(2);
+  }
+
+  &--floating &__title {
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    z-index: 1;
+    transform: translate(0, -50%);
+    transition: transform var(--trans-base), top var(--trans-base), font-size var(--trans-base);
+  }
+
+  &--floating:has(input:focus) &__title,
+  &--floating:has(input:not(:placeholder-shown)) &__title {
+    transform: translateY(-100%);
+    top: 0;
+    font-size: 0.8em;
   }
 
   &__wrapper {
@@ -12,8 +31,8 @@
     position: relative;
   }
 
-  &__input {
-    width: 100%;
+  &--floating .input::placeholder {
+    color: transparent;
   }
 
   &__error {
