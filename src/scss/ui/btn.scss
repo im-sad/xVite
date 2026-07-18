@@ -1,4 +1,8 @@
 .btn {
+  --btn-size-md: var(--field-md);
+  --btn-size-sm: var(--field-sm);
+  --btn-size-lg: var(--field-lg);
+
   box-sizing: border-box;
   position: relative;
   bottom: 0;
