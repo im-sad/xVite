@@ -112,20 +112,26 @@ block main
         .section#checkboxes
           h2.section__title Checkboxes
           .section__row.section__row--max
-            +checkbox({ value: 'Checkbox', isChecked: true })
-            +checkbox({ value: 'Checkbox SM', isDisabled: true }) Checkbox disabled
+            +checkbox({ value: 'Checkbox SM', isDisabled: true, isChecked: true }) Checkbox controll disabled
             +checkbox({ size: 'sm' }) Checkbox SM
             +checkbox({ size: 'lg' }) Checkbox LG
             +checkbox({ mod : 'rounded' }) Rounded corners
+          .section__row.section__row--max
+            +checkbox({ value: 'Checkbox', name: 'check-all', size: 'sm'}) SM
+            +checkbox({ value: 'Checkbox', name: 'check-all', size: 'md' }) MD
+            +checkbox({ value: 'Checkbox', name: 'check-all', size: 'lg'}) LG
 
         .section#radios
           h2.section__title Radios
           .section__row.section__row--max
-            +radio({ name: 'radio1', isChecked: true })
-            +radio({ name: 'radio1', isDisabled: true }) Radio disabled
+            +radio({ name: 'radio1', isDisabled: true, isChecked: true }) Radio controll disabled
             +radio({ name: 'radio1', size: 'sm' }) Radio SM
             +radio({ name: 'radio1', size: 'lg' }) Radio LG
             +radio({ mod: 'square' }) Radio square
+          .section__row.section__row--max
+            +radio({ value: 'Checkbox', name: 'radio-all', size: 'sm'}) SM
+            +radio({ value: 'Checkbox', name: 'radio-all', size: 'md' }) MD
+            +radio({ value: 'Checkbox', name: 'radio-all', size: 'lg'}) LG
 
         .section#badges
           h2.section__title Badges
