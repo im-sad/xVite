@@ -33,7 +33,7 @@ const addRules = (form: HTMLElement, validator: JustValidate): void => {
   elements.forEach((element: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement) => {
     const isReq = element.required
     const isTel = element.classList.contains('js-tel')
-    const isEmail = element.type === 'email'
+    const isEmail = element.type === 'email' || element.classList.contains('js-mail')
     const isDate = element.classList.contains('js-date')
     const isFile = element.type === 'file'
     const min: number | false = parseAttribute(element, 'minlength')
