@@ -30,7 +30,7 @@
 
   &:is(:active, .is-active):not(:disabled):not(.is-disabled) {
     outline: none;
-    scale: 0.98;
+    scale: 0.9;
   }
 
   &:is(:disabled, .is-disabled) {
@@ -61,12 +61,32 @@
   &--var-primary {
     background: var(--color-black);
     color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:hover,
+    &:visited {
+      color: var(--color-white);
+    }
   }
 
   &--var-secondary {
     background: transparent;
     border-color: var(--color-black);
     color: var(--color-black);
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:hover,
+    &:visited {
+      color: var(--color-black);
+    }
   }
 
   // sizes
