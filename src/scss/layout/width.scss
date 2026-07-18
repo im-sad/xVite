@@ -1,5 +1,5 @@
 .width {
-  --width-gap: #{rem(20)};
+  --width-gap: 20px;
 
   width: min(100%, calc(var(--width) + var(--width-gap) * 2));
   margin-inline: auto;
