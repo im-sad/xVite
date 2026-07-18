@@ -65,6 +65,7 @@ const renderButton = ({
 
   return link ? `<a
       href="#"
+      onclick="return false;"
       class="${classes.join(' ')}"
       role="button"
       ${disabled ? 'disabled' : ''}
