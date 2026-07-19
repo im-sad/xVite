@@ -4,11 +4,11 @@ export default {
   argTypes: {
     checked: {
       control: 'boolean',
-      description: 'Checked state'
+      description: 'Checked состояние'
     },
     disabled: {
       control: 'boolean',
-      description: 'Disabled state'
+      description: 'Disabled состояние'
     },
     size: {
       control: 'select',
@@ -20,16 +20,19 @@ export default {
     },
     label: {
       control: 'text',
-      description: 'Radio label'
+      description: 'Текст заголовка'
     },
     mod: {
-      control: 'select',
-      options: ['square'],
-      description: 'Radio modifier'
+      control: { type: 'inline-check' },
+      options: ['square', 'start'],
+      description: 'Модификаторы',
+      table: {
+        type: { summary: 'rounded | start' }
+      }
     },
     name: {
       control: 'text',
-      description: 'Input name'
+      description: 'Атрибут name'
     }
   }
 }
