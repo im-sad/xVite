@@ -3,7 +3,7 @@
 
 // Titles
 @mixin titleH1 {
-  font-size: clamp(f.rem(32), f.size(35), f.rem(40));
+  font-size: clamp(f.rem(32), var(--fluid-size), f.rem(40));
   line-height: f.lh(30px, 34px);
   font-weight: 700;
 }
