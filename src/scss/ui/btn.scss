@@ -20,6 +20,7 @@
   text-overflow: ellipsis;
   user-select: none;
   isolation: isolate;
+  anchor-name: --btn;
 
   // states
   &:hover:not(:disabled):not(.is-disabled) {
