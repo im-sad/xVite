@@ -156,7 +156,12 @@
     border-radius: 50%;
     translate: -50% -50%;
     transform-origin: center;
-    animation: scale 1s linear infinite;
     opacity: 0;
+  }
+
+  &__text {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 }
