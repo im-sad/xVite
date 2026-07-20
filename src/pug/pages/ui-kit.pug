@@ -82,7 +82,12 @@ block main
             +btn({ var: 'primary', size: 'lg' }) Button LG
             +btn({ var: 'primary', size: 'lg', hasLoad: true, isLoad: true }) Button LG
             +btn({ var: 'primary', size: 'lg', hasLoad: true, isLoad: true, mod: 'square' }) X
-            +btn({ var: 'primary', size: 'lg', hasLoad: true, mod: ['square', 'rounded'] }) X
+            +btn({ var: 'primary', size: 'sm', mod: ['square', 'rounded'] })
+              +icn({ name: 'icn-close', size: 12 })
+            +btn({ var: 'primary', size: 'md', mod: ['square', 'rounded'] })
+              +icn({ name: 'icn-close' })
+            +btn({ var: 'primary', size: 'lg', mod: ['square', 'rounded'] })
+              +icn({ name: 'icn-close', size: 24 })
           .section__row
             +btn({ var: 'secondary' }) Button secondary
             +btn({ var: 'secondary', size: 'sm' }) Button SM
@@ -90,7 +95,12 @@ block main
             +btn({ var: 'secondary', size: 'lg' }) Button LG
             +btn({ var: 'secondary', size: 'lg', hasLoad: true, isLoad: true }) Button LG
             +btn({ var: 'secondary', size: 'lg', hasLoad: true, isLoad: true, mod: 'square' }) X
-            +btn({ var: 'secondary', size: 'lg', hasLoad: true, mod: ['square', 'rounded'] }) X
+            +btn({ var: 'secondary', size: 'sm', mod: ['square', 'rounded'] })
+              +icn({ name: 'icn-close', size: 12 })
+            +btn({ var: 'secondary', size: 'md', mod: ['square', 'rounded'] })
+              +icn({ name: 'icn-close' })
+            +btn({ var: 'secondary', size: 'lg', mod: ['square', 'rounded'] })
+              +icn({ name: 'icn-close', size: 24 })
 
         .section#inputs
           h2.section__title Inputs
@@ -131,7 +141,8 @@ block main
         .section#checkboxes
           h2.section__title Checkboxes
           .section__row.section__row--max
-            +checkbox({ value: 'Checkbox SM', isDisabled: true, isChecked: true }) Checkbox controll disabled
+            +checkbox({ value: 'Checkbox SM', isDisabled: true, isChecked: true }) Checkbox controll is disabled
+            +checkbox({ value: 'Checkbox SM', isChecked: true, mod: 'start' }) Checkbox controll start align
             +checkbox({ size: 'sm' }) Checkbox SM
             +checkbox({ size: 'lg' }) Checkbox LG
             +checkbox({ mod : 'rounded' }) Rounded corners
@@ -143,7 +154,8 @@ block main
         .section#radios
           h2.section__title Radios
           .section__row.section__row--max
-            +radio({ name: 'radio1', isDisabled: true, isChecked: true }) Radio controll disabled
+            +radio({ name: 'radio1', isDisabled: true, isChecked: true }) Radio controll is disabled
+            +radio({ name: 'radio1', isChecked: true, mod: 'start' }) Radio controll start align
             +radio({ name: 'radio1', size: 'sm' }) Radio SM
             +radio({ name: 'radio1', size: 'lg' }) Radio LG
             +radio({ name: 'radio1', mod: 'square' }) Radio square
@@ -156,4 +168,8 @@ block main
           h2.section__title Badges
           .section__row.section__row--max
             +badge({ var: 'primary', size: 'sm' }) Badge primary
+            +badge({ var: 'primary', size: 'md' }) Badge primary
+            +badge({ var: 'primary', size: 'lg' }) Badge primary
             +badge({ var: 'secondary', size: 'sm' }) Badge secondary
+            +badge({ var: 'secondary', size: 'md' }) Badge secondary
+            +badge({ var: 'secondary', size: 'lg' }) Badge secondary

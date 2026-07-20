@@ -3,6 +3,8 @@
   --btn-size-sm: var(--field-sm);
   --btn-size-lg: var(--field-lg);
 
+  anchor-name: --btn;
+  anchor-scope: all;
   box-sizing: border-box;
   position: relative;
   bottom: 0;
@@ -17,10 +19,10 @@
   max-width: 100%;
   opacity: 1;
   transition: background var(--trans-base), color var(--trans-base);
+  touch-action: none;
   text-overflow: ellipsis;
   user-select: none;
   isolation: isolate;
-  anchor-name: --btn;
 
   // states
   &:hover:not(:disabled):not(.is-disabled) {

@@ -1,11 +1,13 @@
 .badge {
   display: inline-flex;
   place-items: center;
+  gap: rem(6);
   user-select: none;
   text-transform: lowercase;
   min-width: max-content;
   flex: 0 0 auto;
 
+  // variant
   &--var-primary {
     background: var(--color-main);
   }
@@ -15,6 +17,7 @@
     color: var(--color-white);
   }
 
+  // sizes
   &--size-md {
     border-radius: rem(4);
     padding: rem(6) rem(12);

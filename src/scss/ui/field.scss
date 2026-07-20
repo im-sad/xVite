@@ -7,7 +7,7 @@
 
   &__title {
     display: block;
-    margin-bottom: rem(2);
+    margin-bottom: rem(4);
   }
 
   &--floating &__title {
@@ -59,6 +59,10 @@
     display: none;
     color: var(--color-error);
     pointer-events: none;
+
+    &:empty {
+      display: none;
+    }
   }
 
   &.has-error &__error {
