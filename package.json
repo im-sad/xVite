@@ -24,7 +24,7 @@
     "editorconfig": "npx editorconfig-cli",
     "test": "npm run editorconfig && npm run lint:pug && npm run lint:scss && npm run lint:ts && npm run lint:type",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook:build": "storybook build"
   },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "3.0.0",
