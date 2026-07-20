@@ -18,3 +18,14 @@
     scale: 0.6;
   }
 }
+
+@keyframes squash {
+  0%,
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  50% {
+    transform: scaleX(1.15) scaleY(0.9);
+  }
+}
