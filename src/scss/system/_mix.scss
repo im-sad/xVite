@@ -157,14 +157,6 @@
   }
 }
 
-@mixin blur($val) {
-  // stylelint-disable
-  -webkit-backdrop-filter: blur($val);
-  // stylelint-enable
-  backdrop-filter: blur($val);
-  will-change: backdrop-filter;
-}
-
 @mixin visually-hidden {
   visibility: hidden;
   position: absolute;
