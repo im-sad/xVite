@@ -30,6 +30,10 @@
     cursor: pointer;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:is(:active, .is-active):not(:disabled):not(.is-disabled) {
     outline: none;
     scale: 0.9;

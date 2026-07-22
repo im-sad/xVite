@@ -1,6 +1,5 @@
 .preloader {
   @include absolute-layer;
-  @include blur(10px);
   display: grid;
   place-items: center;
   z-index: var(--z-preloader);
