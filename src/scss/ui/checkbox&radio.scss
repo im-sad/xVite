@@ -227,6 +227,7 @@
     &::before {
       background: var(--color-bg-disabled);
       opacity: 0.7;
+      border: 1px solid var(--color-bd-control);
     }
 
     &::after {
@@ -238,7 +239,6 @@
     &::before {
       background: var(--color-bg-disabled);
       opacity: 0.7;
-      border: 1px solid var(--color-bd-control);
     }
 
     &::after {
@@ -249,6 +249,7 @@
   &--var-invert input:checked:disabled ~ &__title {
     &::before {
       background: var(--color-bg-checked);
+      border-color: color-mix(in oklch, var(--color-bg-checked) 80%, var(--color-black));
     }
   }
 
