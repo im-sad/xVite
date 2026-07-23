@@ -12,6 +12,7 @@ mixin select(props = {})
     class=mod
     disabled=props.isDisabled
     required=props.isRequired
+    aria-label=props.ariaLabel
   )&attributes(attributes)
     if props.placeholder
       option(value="" selected disabled).select__placeholder=props.placeholder
