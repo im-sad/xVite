@@ -2,6 +2,14 @@ export default {
   title: 'UI/Checkbox',
   tags: ['autodocs'],
   argTypes: {
+    variant: {
+      control: 'select',
+      options: ['', 'invert'],
+      description: 'Визуальный вариант',
+      table: {
+        type: { summary: 'invert | empty' }
+      }
+    },
     checked: {
       control: 'boolean',
       description: 'Checked состояние'
@@ -37,10 +45,22 @@ export default {
   }
 }
 
-const renderCheckbox = ({ checked = false, disabled = false, size = '', label = '', mod = '', name = 'checkbox' } = {}) => {
+const renderCheckbox = ({
+  variant = '',
+  checked = false,
+  disabled = false,
+  size = '',
+  label = '',
+  mod = '',
+  name = 'checkbox'
+} = {}) => {
   const classes = ['checkbox']
 
   classes.push(`checkbox--size-${size}`)
+
+  if (variant) {
+    classes.push(`checkbox--var-${variant}`)
+  }
 
   const selectedMods = Array.isArray(mod) ? mod : [mod]
   selectedMods.forEach((mod) => classes.push(`checkbox--mod-${mod}`))
@@ -57,10 +77,19 @@ const renderCheckbox = ({ checked = false, disabled = false, size = '', label = 
   </label>`
 }
 
+
 export const Default = {
   args: {
     label: 'Accept terms',
     name: 'terms'
+  },
+  render: (args) => renderCheckbox(args)
+}
+
+export const Invert = {
+  args: {
+    variant: 'invert',
+    label: 'Invert style'
   },
   render: (args) => renderCheckbox(args)
 }
@@ -73,6 +102,12 @@ export const Group = {
       ${renderCheckbox({ label: 'Option 3', name: 'opt3' })}
       ${renderCheckbox({ label: 'Disabled', name: 'opt4', disabled: true })}
       ${renderCheckbox({ label: 'Disabled', name: 'opt4', disabled: true, checked: true })}
+      <hr />
+      ${renderCheckbox({ label: 'Option 1', name: 'opt1', checked: true, variant: 'invert' })}
+      ${renderCheckbox({ label: 'Option 2', name: 'opt2', variant: 'invert' })}
+      ${renderCheckbox({ label: 'Option 3', name: 'opt3', variant: 'invert' })}
+      ${renderCheckbox({ label: 'Disabled', name: 'opt4', disabled: true, variant: 'invert' })}
+      ${renderCheckbox({ label: 'Disabled', name: 'opt4', disabled: true, checked: true, variant: 'invert' })}
     </div>
   `
 }
