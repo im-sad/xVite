@@ -1,6 +1,6 @@
 mixin radio(props = {})
   -
-    const variant = props.variant && `radio--var-${props.var}`
+    const variant = props.var && `radio--var-${props.var}`
     const size = props.size && `radio--size-${props.size}`
     const mod = props.mod && (Array.isArray(props.mod)
       ? props.mod.filter(Boolean).map(mod => `radio--mod-${mod}`).join(' ')
@@ -10,6 +10,7 @@ mixin radio(props = {})
     class=variant
     class=size
     class=mod
+    aria-label=props.ariaLabel
   )&attributes(attributes)
     input(
       id=props.id

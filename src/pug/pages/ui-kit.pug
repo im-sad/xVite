@@ -143,26 +143,49 @@ block main
           .section__row.section__row--max
             +checkbox({ value: 'Checkbox SM', isDisabled: true, isChecked: true }) Checkbox controll is disabled
             +checkbox({ value: 'Checkbox SM', isChecked: true, mod: 'start' }) Checkbox controll start align
-            +checkbox({ size: 'sm' }) Checkbox SM
-            +checkbox({ size: 'lg' }) Checkbox LG
             +checkbox({ mod : 'rounded' }) Rounded corners
+          .section__row.section__row--max
+            +checkbox({ value: 'Checkbox SM', isDisabled: true, isChecked: true, var: 'invert' }) Checkbox controll is disabled
+            +checkbox({ value: 'Checkbox SM', isDisabled: true, var: 'invert' }) Checkbox controll is disabled
+            +checkbox({ value: 'Checkbox SM', isChecked: true, mod: 'start', var: 'invert' }) Checkbox controll start align
+            +checkbox({ mod : 'rounded', var: 'invert' }) Rounded corners
           .section__row.section__row--max
             +checkbox({ value: 'Checkbox', name: 'check-all', size: 'sm'}) SM
             +checkbox({ value: 'Checkbox', name: 'check-all', size: 'md' }) MD
             +checkbox({ value: 'Checkbox', name: 'check-all', size: 'lg'}) LG
+          .section__row.section__row--max
+            +checkbox({ value: 'Checkbox', name: 'check-all', size: 'sm', var: 'invert' }) SM
+            +checkbox({ value: 'Checkbox', name: 'check-all', size: 'md', var: 'invert' }) MD
+            +checkbox({ value: 'Checkbox', name: 'check-all', size: 'lg', var: 'invert'}) LG
 
         .section#radios
           h2.section__title Radios
           .section__row.section__row--max
-            +radio({ name: 'radio1', isDisabled: true, isChecked: true }) Radio controll is disabled
+            +radio({ name: 'radio1', isDisabled: true, isChecked: true, name: 'r-1' }) Radio controll is disabled
+            +radio({ name: 'radio1', isDisabled: true, name: 'r-1' }) Radio controll is disabled
             +radio({ name: 'radio1', isChecked: true, mod: 'start' }) Radio controll start align
-            +radio({ name: 'radio1', size: 'sm' }) Radio SM
-            +radio({ name: 'radio1', size: 'lg' }) Radio LG
             +radio({ name: 'radio1', mod: 'square' }) Radio square
+          .section__row.section__row--max
+            +radio({ name: 'radio1', isDisabled: true, isChecked: true, name: 'r-2', var: 'invert' }) Radio controll is disabled
+            +radio({ name: 'radio1', isDisabled: true, name: 'r-2', var: 'invert' }) Radio controll is disabled
+            +radio({ name: 'radio1', isChecked: true, mod: 'start', var: 'invert' }) Radio controll start align
+            +radio({ name: 'radio1', mod: 'square', var: 'invert' }) Radio square
           .section__row.section__row--max
             +radio({ value: 'Checkbox', name: 'radio-all', size: 'sm'}) SM
             +radio({ value: 'Checkbox', name: 'radio-all', size: 'md' }) MD
             +radio({ value: 'Checkbox', name: 'radio-all', size: 'lg'}) LG
+          .section__row.section__row--max
+            +radio({ value: 'Checkbox', name: 'radio-all', size: 'sm', var: 'invert' }) SM
+            +radio({ value: 'Checkbox', name: 'radio-all', size: 'md', var: 'invert' }) MD
+            +radio({ value: 'Checkbox', name: 'radio-all', size: 'lg', var: 'invert' }) LG
+
+        .section#toggle
+          h2.section__title Toggle
+          .section__row.section__row--max
+            +toggle({ name: 'radio1', isDisabled: true, isChecked: true, name: 'r-1' }) Radio controll is disabled
+            +toggle({ name: 'radio1', isDisabled: true, name: 'r-1' }) Radio controll is disabled
+            +toggle({ name: 'radio1', isChecked: true, mod: 'start' }) Radio controll start align
+            +toggle({ name: 'radio1', mod: 'square' }) Radio square
 
         .section#badges
           h2.section__title Badges
