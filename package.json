@@ -60,7 +60,7 @@
     "vituum": "^1"
   },
   "dependencies": {
-    "gsap": "^3.13.0",
+    "gsap": "^3.*",
     "hystmodal": "^1.*",
     "imask": "^7.*",
     "js-cookie": "^3.*",
