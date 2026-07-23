@@ -37,4 +37,5 @@ mixin input(props = {})
     autocapitalize="off"
     spellcheck=isSpellCheckOff ? 'false' : props.spellcheck
     inputmode=inputmode
+    aria-label=props.ariaLabel
   )&attributes(attributes)

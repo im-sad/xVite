@@ -6,7 +6,7 @@ mixin radio(props = {})
       ? props.mod.filter(Boolean).map(mod => `radio--mod-${mod}`).join(' ')
       : `radio--mod-${props.mod}`)
 
-  #{props.noLabel ? 'div' : 'label'}.radio(
+  #{props.notLabel ? 'div' : 'label'}.radio(
     class=variant
     class=size
     class=mod
