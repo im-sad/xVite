@@ -1,8 +1,8 @@
 .checkbox,
 .radio {
   --radius-control: #{rem(4)};
-  --color-bg-control: #fff;
   --color-bd-control: #ccc;
+  --color-bg-control: #fff;
   --color-bg-disabled: #eee;
   --color-bg-checked: #1f95de;
   --control-size: 20px;
@@ -63,6 +63,13 @@
 
   &__title::before {
     border: 1px solid var(--color-bd-control);
+  }
+
+  &:active input:not(:disabled) ~ &__title {
+    &::before,
+    &::after {
+      transform: scale(0.9);
+    }
   }
 
   input {
