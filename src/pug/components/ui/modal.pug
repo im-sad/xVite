@@ -12,6 +12,7 @@ mixin modal(props = {})
         aria-modal="true"
         aria-labelledby=props.title
         aria-describedby=props.description
+        tabindex="-1"
       )
         unless props.noClose
           button(
