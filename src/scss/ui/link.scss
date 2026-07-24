@@ -1,0 +1,75 @@
+.link {
+  --link-color: var(--color-accent);
+  --link-hover-color: var(--color-error);
+  --link-decor-offset: 0.1em;
+
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  color: var(--link-color);
+  max-width: 100%;
+  text-overflow: ellipsis;
+  text-underline-offset: var(--link-decor-offset);
+  transition: background var(--trans-base), color var(--trans-base);
+
+  &:hover {
+    color: var(--link-hover-color);
+  }
+
+  &[href=''] {
+    cursor: not-allowed;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: calc(var(--link-decor-offset) * -1);
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: currentcolor;
+    transform: scaleX(1);
+    transition: transform var(--trans-base);
+    transform-origin: left bottom;
+  }
+
+  &:hover::after {
+    transform: scaleX(0);
+    transform-origin: right bottom;
+  }
+
+  // mod
+  &--mod-underline {
+    text-decoration: underline;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &--mod-invert {
+    &::after {
+      transform-origin: right bottom;
+      transform: scaleX(0);
+    }
+
+    &:hover::after {
+      transform-origin: left bottom;
+      transform: scaleX(1);
+    }
+  }
+
+  // size
+  &--size-md {
+    font-size: rem(18);
+  }
+
+  &--size-sm {
+    font-size: rem(12);
+  }
+
+  &--size-lg {
+    font-size: rem(24);
+  }
+}

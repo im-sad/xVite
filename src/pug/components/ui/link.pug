@@ -1,0 +1,22 @@
+mixin link(props = {})
+  -
+    const target = props.isExternal && '_blank'
+    const size = props.size && `link--size-${props.size}`
+    const variant = props.var && `link--var-${props.var}`
+    const mod = props.mod && (Array.isArray(props.mod)
+      ? props.mod.filter(Boolean).map((mod) => `link--mod-${mod}`).join(' ')
+      : `link--mod-${props.mod}`)
+
+  a.link(
+    href=props.href || ''
+    target=target
+    class=size
+    class=variant
+    class=mod
+    aria-label=props.ariaLabel
+    aria-haspopup=props.modal && 'dialog'
+    rel=props.isExternal && 'nofollow noopener noreferrer'
+    title=props.title
+    data-open-modal=props.modal && `#modal-${props.modal}`
+  )
+    block
